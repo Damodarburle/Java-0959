@@ -1,0 +1,27 @@
+import java.util.*;
+class d{
+    public static void main(String args[]){
+        int sum=0,n,i,ps=0,pc=0,ns=0,nc=0,na=0,pa=0;
+        Scanner s=new Scanner(System.in);
+        n=s.nextInt();
+        int []k=new int[n];
+        for(i=0;i<n;i++){
+            k[i]=s.nextInt();
+        }
+        for(i=0;i<n;i++){
+            if(k[i]>0){
+               ps=ps+1;
+               pc++;
+            }
+            else{
+                ns=ns+1;
+                nc++;
+            }
+        }
+        pa=ps/pc;
+        na=ns/nc;
+        System.out.println(na);
+        System.out.println(pa);
+        
+    }
+}
