@@ -1,0 +1,28 @@
+class replace{
+    public static void main(String args[]){
+        int size;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the size of an array:");
+        size=s.nextInt();
+        int[] data1=new data1[size];
+        int[] data2=new data2[size*2];
+        System.out.println("Enter the elements into array:");
+        for(int i=0;i<size;i++){
+            data1[i]=s.nextInt();
+        }
+        for(int i=0;i<size*2;i+2){
+            if(i==0){
+                data2[i]=data1[i];
+                data2[i+1]=data1[i]*data1[i];
+            }
+            else{
+                data2[i]=data1[i-1];
+                data2[i]=data1[i-1]*data1[i-1];
+            }
+        }
+        for(int i=0;i<size*2;i++){
+            System.out.print(data2[i]);
+        }
+    }
+}
+    
