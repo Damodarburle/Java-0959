@@ -1,0 +1,50 @@
+import java.util.*;
+class BankAccount{
+    int accno;
+    int balance=1000;
+    String name;
+    String type;
+    
+    void read(){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the name of the account holder:");
+        this.name=s.nextLine();
+        System.out.println("Enter the account number:");
+        this.accno=s.nextInt();
+        s.nextLine();
+        System.out.println("Enter the type:(sav/curr)");
+        this.type=s.nextLine();
+    }
+    void deposite(){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the amount to be deposited:");
+        int deposite=s.nextInt();
+        if(deposite<0){
+            System.out.println("Deposite amount must be greater than 0");
+        }
+        else{
+            this.balance+=deposite;
+            System.out.println("Balance is:"+this.balance);
+        }
+        
+    }
+    void withdrawl(){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the amount to be withdrawl:");
+        int amount=s.nextInt();
+        if(amount<0){
+            System.out.println("Enter the correct amount to be withdrawed:");
+        }
+        else{
+            this.balance-=amount;
+           System.out.println("After withdrawl the balance is:"+this.balance);
+
+        }
+    }
+    public static void main(String args[]){
+        BankAccount b=new BankAccount();
+        b.read();
+        b.deposite();
+        b.withdrawl();
+    }
+}
