@@ -1,0 +1,33 @@
+import java.util.*;
+class organization{
+    public static void main(String args[]){
+        double n,k;
+        char m;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the salary of the employee:");
+        n=s.nextInt();
+        System.out.println("Enter the grade of the employee:");
+        m=s.next().charAt(0);
+        
+        if(m=='A'&& n<=10000){
+            k=n*(0.05+0.02);
+            n=n+k;
+        }
+        else if(m=='A'){
+            k=n*0.05;
+            n=n+k;
+        }
+        else if(m=='B'&& n<=10000){
+            k=n*(0.1+0.02);
+            n=n+k;
+          }
+          else if(m=='B'){
+              k=n*0.1;
+              n=n+k;
+          }
+          else{
+              System.out.println("Invalid");
+          }
+          System.out.println(n);
+    }
+}
