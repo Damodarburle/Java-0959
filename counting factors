@@ -1,0 +1,14 @@
+import java.util.*;
+class R192224203{
+    public static  void main(String args[]){
+        int n,f=0;
+        Scanner s=new Scanner(System.in);
+        n=s.nextInt();
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                  f=f+1;   
+            }
+        }
+        System.out.println(f);
+    }
+}
