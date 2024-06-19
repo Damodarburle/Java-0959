@@ -1,0 +1,14 @@
+import java.util.*;
+class R192224204{
+    public static void main(String args[]) {
+        int total_user,staff_user,non_teaching,student_user;
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter the number of total users:");
+        total_user=s.nextInt();
+        System.out.println("Enter the number of staff_user:");
+        staff_user=s.nextInt();
+        non_teaching=staff_user/3;
+        student_user=total_user-staff_user-non_teaching;
+        System.out.println(student_user);
+    }
+}
