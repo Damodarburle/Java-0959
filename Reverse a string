@@ -1,0 +1,14 @@
+import java.util.*;
+class reverse{
+    public static void main(String args[]) {
+        String str,strtemp="";
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the string:");
+        str=s.nextLine();
+        int length=str.length();
+        for(int i=str.length()-1;i>=0;i--) {
+            strtemp+=str.charAt(i);
+        }
+        System.out.println(strtemp);
+    }
+}
