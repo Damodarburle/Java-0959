@@ -1,0 +1,27 @@
+import java.util.*;
+class R192224203{
+    public static void main(String args[]){
+        int m,n,i,j,k,sum,c=0;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the starting value of m:");
+        m=s.nextInt();
+        System.out.println("Enter the starting value of n:");
+        n=s.nextInt();
+        for(i=m;i<=n;i++) {
+            sum=0;
+            for(j=1;j<i;j++) {
+                if(i%j==0){
+                    sum=sum+j;
+                }
+                
+            }
+            if(sum==i){
+                System.out.println(i);
+                c+=1;
+            }
+            if(c==3){
+                break;
+            }
+        }
+    }
+}
