@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class CompositeNumbers {
+    public static void main(String[] args) {
+        int m, n, i, j, flag;
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Enter the starting value of m:");
+        m = s.nextInt();
+        System.out.println("Enter the ending value of n:");
+        n = s.nextInt();
+        
+        for (i = m; i <= n; i++) {
+            flag = 0; // Reset flag for each number i
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = 1; // i is divisible by j, hence composite
+                    break;    // No need to check further
+                }
+            }
+            if (flag != 0) {
+                System.out.print(i + " ");
+            }
+        }
+        
+        s.close(); // Close the scanner
+    }
+}
